@@ -12,13 +12,19 @@ function countNumberRepetition(arr){
         }
     }
 
-    for(let key in count){
-        if(count[key] !== undefined){
-            console.log(key, count[key]-1);
+
+    let repeated_numbers=[];
+
+    for(let num in count){
+        if(count[num]-1 >= 1){
+            repeated_numbers.push(num, "repeated", count[num]);
         } 
     }
+    return repeated_numbers;
 }
 
 let myArray= [2,2,3,4,7,3,6,4,4];
 const size= myArray.length;
-countNumberRepetition(myArray);
+const repeated_numbers = countNumberRepetition(myArray);
+console.log(repeated_numbers);
+
