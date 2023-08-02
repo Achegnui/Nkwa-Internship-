@@ -1,22 +1,19 @@
 function displayRepeatedNumbers(numbers){
-    size = numbers.length;
-    repeated_nums=[];
-    let count = 0;
+    let counter=0;
+    let size= numbers.length;
+    let repeated = [];
     for(let i=0; i<size; i++){
-        for(let j=i+1; j<=size; j++){
-            if(numbers[i] === numbers[j]){
-                count++;
-                
-            }else{
-                count=0;
+        for(let j=i+1; j<size; j++){
+            if(repeated.includes(numbers[i])){
+                continue;
             }
-            if(count>=1){
-                repeated_nums.push(numbers[i]);
+            if(numbers[i]==numbers[j]){
+                repeated.push(numbers[i]);
             }
-        }   
+        }
     }
-    return repeated_nums;
+    return repeated;
 }
 
-let numbers = [2, 2, 3, 7, 4, 4];
-console.log(displayRepeatedNumbers(numbers));
+let myArray=[2,2,3,6,3,7,7,4,2];
+console.log(displayRepeatedNumbers(myArray));
