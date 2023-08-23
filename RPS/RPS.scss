@@ -1,0 +1,129 @@
+body {
+  background-color: aliceblue;
+}
+
+.container {
+  //background-color: aqua;
+  height: 100vh;
+  display: flex;
+  .box1 {
+    // background-color: red;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .main-comp {
+      //background-color: black;
+      border: 1px solid;
+      border-radius: 0.5em;
+      height: 45%;
+      width: 80%;
+      position: relative;
+      margin-top: 2em;
+      margin-left: 2em;
+    }
+    .pics {
+      // background-color: green;
+      height: 30%;
+      width: 80%;
+      position: relative;
+      margin-top: 2em;
+      margin-left: 2em;
+      display: flex;
+      .pic {
+        //background-color: white;
+        justify-content: space-around;
+        position: relative;
+        // height: 20%;
+        // width: 70%;
+        margin-top: 2em;
+        margin-left: 2em;
+        margin-right: 2em;
+        padding-top: 1em;
+        img {
+          height: 7em;
+          width: 5em;
+          background-size: cover;
+          background-position: center;
+        }
+      }
+    }
+  }
+  .timer-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    // background-color: white;
+    height: 100%;
+    width: 40%;
+    .timer {
+      //background-color: black;
+      //color: aliceblue;
+      text-align: center;
+      padding-top: 1em;
+      height: 20%;
+      width: 30%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5em;
+      font-weight: bolder;
+      font-size: 2.5em;
+    }
+    .score {
+      // background-color: brown;
+      height: 10%;
+      width: 34%;
+      margin-top: 20em;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      // padding-top: 1em;
+      font-size: 20px;
+    }
+  }
+  .box2 {
+    // background-color: yellow;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .main-user {
+      //background-color: black;
+      border: 1px solid;
+      border-radius: 0.5em;
+      height: 45%;
+      width: 80%;
+      position: relative;
+      margin-top: 2em;
+      margin-left: 2em;
+    }
+    .pics {
+      //background-color: green;
+      height: 30%;
+      width: 80%;
+      position: relative;
+      margin-top: 2em;
+      margin-left: 2em;
+      display: flex;
+      .pic {
+        //background-color: white;
+        justify-content: space-evenly;
+        position: relative;
+        height: 60%;
+        width: 30%;
+        margin-top: 2em;
+        margin-left: 2em;
+        margin-right: 2em;
+        padding-top: 1em;
+        img {
+          height: 7em;
+          width: 5em;
+          background-size: cover;
+          background-position: center;
+        }
+      }
+    }
+  }
+}
