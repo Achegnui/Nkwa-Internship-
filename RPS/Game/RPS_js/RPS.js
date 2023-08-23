@@ -9,15 +9,15 @@ const score = document.getElementById("score");
 const objects = [
   {
     name: "rock",
-    image: `<img src="rock.jpg" style = "height: 100%; width: 100%; border-radius: 0.5em;"/>`,
+    image: `<img src="../Game/RPS_css/rock.jpg" style = "height: 100%; width: 100%; border-radius: 0.5em;"/>`,
   },
   {
     name: "paper",
-    image: `<img src="paper.jpg" style = "height: 100%; width: 100%; border-radius: 0.5em;"/>`,
+    image: `<img src="../Game/RPS_css/paper.jpg" style = "height: 100%; width: 100%; border-radius: 0.5em;"/>`,
   },
   {
     name: "scissors",
-    image: `<img src="scissors.jpg" style = "height: 100%; width: 100%; border-radius: 0.5em;"/>`,
+    image: `<img src="../Game/RPS_css/scissors.jpg" style = "height: 100%; width: 100%; border-radius: 0.5em;"/>`,
   },
 ];
 //countDown function called gives a 3 second counter before game commences
