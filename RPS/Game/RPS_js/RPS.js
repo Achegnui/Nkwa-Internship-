@@ -21,7 +21,7 @@ const objects = [
   },
 ];
 //countDown function called gives a 3 second counter before game commences
-countDown(); //why isn't working.
+countDown(); 
 //we have event addEventListeners each containintwo functions which have been called and shall be expplained below
 //the rock.addEventListener uses the display to display the image of a rock from the array Objects and randomisation done for the computer to display its own image(random()) and comparison done to award a point(compare())
 rock.addEventListener("click", function () {
