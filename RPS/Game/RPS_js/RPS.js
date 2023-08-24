@@ -21,9 +21,9 @@ const objects = [
   },
 ];
 //countDown function called gives a 3 second counter before game commences
-countDown();
+countDown(); //why isn't working.
 //we have event addEventListeners each containintwo functions which have been called and shall be expplained below
-//the rock.addEventListener uses the display to display the image of a rock from the array Objects and randomisation done for the computer to display its own image and comparison done to award a point
+//the rock.addEventListener uses the display to display the image of a rock from the array Objects and randomisation done for the computer to display its own image(random()) and comparison done to award a point(compare())
 rock.addEventListener("click", function () {
   display.innerHTML = objects[0].image;
   const user_Selection = objects[0].name;
@@ -52,16 +52,17 @@ const timer = document.getElementById("timer");
 
 //countDown function creates a 3 second counter which is called in each addEventListener. it displays in the timer div
 function countDown() {
-  let countdown = 4;
+  let countdown = 3;
   const interval = setInterval(() => {
-    countdown--;
+    // setInterval: repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
     if (countdown === 0) {
       timer.textContent = "GO";
-
+      //clearInterval() method cancels a timed, repeating action which was previously established by a call to setInterval()
       clearInterval(interval);
     } else {
       timer.textContent = countdown;
     }
+    countdown--;
   }, 1000);
 }
 
@@ -104,8 +105,15 @@ function compare(user_Selection) {
       CompPoint++;
       score.textContent = `${CompPoint} : ${userPoint}`;
     }
+    countDown();
   } else {
-    timer.textContent = "Game Over";
+    if (userPoint === CompPoint) {
+      timer.textContent = `Game Over It's a tie`;
+    } else if (userPoint > CompPoint) {
+      timer.textContent = `Game Over You won the Game`;
+    } else {
+      timer.textContent = `Game Over You lost the Game`;
+    }
 
     rock.removeEventListener("click", compare);
     paper.removeEventListener("click", compare);
