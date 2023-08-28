@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <link rel="stylesheet" href="RPS.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1">
+        <div class="main-comp" id="display_comp"></div>
+        <div class="pics">
+          <div class="pic">
+            <button><img src="rock.jpg" alt="" /></button>
+          </div>
+          <div class="pic">
+            <button><img src="paper.jpg" alt="" /></button>
+          </div>
+          <div class="pic">
+            <button><img src="scissors.jpg" alt="" /></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="timer-score">
+        <div class="timer" id="timer"></div>
+        <div class="score">
+          <p><b>3 : 0</b></p>
+        </div>
+      </div>
+
+      <div class="box2">
+        <div class="main-user" id="display"></div>
+        <div id="object"></div>
+        <div class="pics">
+          <div class="pic">
+            <button><img src="rock.jpg" alt="" id="rock" /></button>
+          </div>
+          <div class="pic">
+            <button><img src="paper.jpg" alt="" id="paper" /></button>
+          </div>
+          <div class="pic">
+            <button><img src="scissors.jpg" alt="" id="scissors" /></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="RPS.js"></script>
+  </body>
+</html>

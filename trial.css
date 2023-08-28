@@ -1,0 +1,13 @@
+.red_box {
+  width: 5em;
+  height: 5em;
+  border-radius: 1em;
+  padding-top: 1.3em;
+  cursor: pointer;
+}
+
+.red_box:hover {
+  font-weight: bold;
+  color: white;
+}
+/*# sourceMappingURL=trial.css.map */

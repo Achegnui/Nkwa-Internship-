@@ -1,0 +1,12 @@
+.red_box{
+    
+    width:5em;
+    height: 5em;
+    border-radius: 1em;
+    padding-top: 1.3em;
+    cursor: pointer;
+    &:hover{
+        font-weight: bold;
+        color: white;
+    }
+}

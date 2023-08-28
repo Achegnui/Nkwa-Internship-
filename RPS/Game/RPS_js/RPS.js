@@ -20,8 +20,33 @@ const objects = [
     image: `<img src="../Game/RPS_css/scissors.jpg" style = "height: 100%; width: 100%; border-radius: 0.5em;"/>`,
   },
 ];
-//countDown function called gives a 3 second counter before game commences
-countDown(); //why isn't working.
+
+let userPoint = 0;
+let CompPoint = 0;
+let maxRounds = 3;
+let currentRound = 0;
+
+//countDown function creates a 3 second counter which is called in each addEventListener. it displays in the timer div
+async function countDown() {
+  let countdown = 3;
+
+  if (currentRound < maxRounds) {
+    const interval = setInterval(() => {
+      // setInterval: repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
+      if (countdown === 0) {
+        timer.textContent = "GO";
+        //clearInterval() method cancels a timed, repeating action which was previously established by a call to setInterval()
+        clearInterval(interval);
+      } else {
+        timer.textContent = countdown;
+      }
+      countdown--;
+    }, 1000);
+  }
+}
+
+countDown();
+//why isn't working.
 //we have event addEventListeners each containintwo functions which have been called and shall be expplained below
 //the rock.addEventListener uses the display to display the image of a rock from the array Objects and randomisation done for the computer to display its own image(random()) and comparison done to award a point(compare())
 rock.addEventListener("click", function () {
@@ -50,22 +75,6 @@ scissors.addEventListener("click", function () {
 //const timer gets the element ID of the timer div
 const timer = document.getElementById("timer");
 
-//countDown function creates a 3 second counter which is called in each addEventListener. it displays in the timer div
-function countDown() {
-  let countdown = 3;
-  const interval = setInterval(() => {
-    // setInterval: repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
-    if (countdown === 0) {
-      timer.textContent = "GO";
-      //clearInterval() method cancels a timed, repeating action which was previously established by a call to setInterval()
-      clearInterval(interval);
-    } else {
-      timer.textContent = countdown;
-    }
-    countdown--;
-  }, 1000);
-}
-
 //random function randomises images that will be place in the computer's display
 function random() {
   var rand = Math.floor(Math.random() * objects.length);
@@ -78,16 +87,12 @@ function random() {
   return randomObject.name;
 }
 
-let userPoint = 0;
-let CompPoint = 0;
-let maxRounds = 3;
-let currentRound = 0;
-
 //this is the compare function which compares and awards points accordingly and also stopping usage of the addEventlisteners and displays Game over in the timer div
 //this function is in charged of creating a method to make the game run in 3 rounds
 function compare(user_Selection) {
   const comp_Selection = random();
   currentRound++;
+  console.log(currentRound);
 
   if (currentRound <= maxRounds) {
     if (user_Selection === comp_Selection) {
@@ -105,8 +110,13 @@ function compare(user_Selection) {
       CompPoint++;
       score.textContent = `${CompPoint} : ${userPoint}`;
     }
-    countDown();
+    if (currentRound <= maxRounds) {
+      countDown();
+    }
   } else {
+    document.getElementById("rock").disabled = true;
+    document.getElementById("paper").disabled = true;
+    document.getElementById("scissors").disabled = true;
     if (userPoint === CompPoint) {
       timer.textContent = `Game Over It's a tie`;
     } else if (userPoint > CompPoint) {
@@ -114,9 +124,5 @@ function compare(user_Selection) {
     } else {
       timer.textContent = `Game Over You lost the Game`;
     }
-
-    rock.removeEventListener("click", compare);
-    paper.removeEventListener("click", compare);
-    scissors.removeEventListener("click", compare);
   }
 }

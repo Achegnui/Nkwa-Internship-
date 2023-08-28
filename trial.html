@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="trial.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+    
+    <style>
+
+    </style>
+</head>
+<body>
+   
+        <div class="red_box" onclick="changeColor(this)" style="background-color: red;" id="on_click">
+            Click the box
+        </div>
+
+        <p id="demo">Hello world</p>
+        <button type="button" onclick="myfunc()">Change value</button>
+        
+        <div id="demo1" style="background-color: yellow; width: 200px; height: 200px;">Hello</div>
+        <button type="button" onclick="show()">show</button>
+        <button type="button" onclick="hide()">hide</button>
+
+
+        <button type="button" onclick="myAlert()">alert</button>
+        <p id="elt">value</p>
+        <button type="button" onclick="mySum()">sum</button>
+    
+        <ul id="list">
+            <li>orange</li>
+            <li>pear</li>
+            <li>mango</li>
+        </ul>
+
+        <button type="button" onclick="addContent()">add</button>
+    
+    
+    
+    
+    <script type="text/javascript">
+        
+        function changeColor(element){
+            document.getElementById("on_click").style.backgroundColor= "green";
+            
+        //     var currentColor = element.style.backgroundColor;
+        //     if(currentColor=="red"){
+        //         element.style.backgroundColor == "green";
+        //     }else{
+        //         element.style.backgroundColor == "red";
+        //     }
+            }
+        function myfunc(){
+            document.getElementById("demo").innerHTML = "Javascript";
+        }
+
+        function show(){
+            document.getElementById("demo1").style.display = "block";
+        }
+        function hide(){
+            document.getElementById("demo1").style.display = "none";
+        }        
+
+        document.write("hello world");
+       function myAlert(){
+        alert("this is to display a dialog box on click");
+       }
+       function mySum(){
+        // to change values on the html page  from value to sum
+        document.getElementById("elt").innerHTML = 10;
+       }
+        var li = document.getElementById("list");
+
+        function addContent(){
+            var p = document.createElement("p");
+            var textNode = document.createTextNode("an added phrase");
+            p.appendChild(textNode);
+            
+            li.prepend(p);
+        }
+
+
+    </script>
+
+
+</body>
+</html>

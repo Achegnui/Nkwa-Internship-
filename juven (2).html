@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Item Tracker</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Item Tracker</h1>
+
+  <label for="item">Item:</label>
+  <input type="text" id="item" placeholder="Enter item name">
+
+  <label for="price">Price:</label>
+  <input type="number" id="price" placeholder="Enter item price">
+
+  <button id="addButton">Add</button>
+
+  <h2>Items:</h2>
+  <table id="itemTable">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="itemTableBody">
+    </tbody>
+  </table>
+
+  <h2>Total Price:</h2>
+  <div id="totalPrice">0</div>
+
+  <script>
+    const addButton = document.getElementById('addButton');
+    const itemTableBody = document.getElementById('itemTableBody');
+    const totalPriceElement = document.getElementById('totalPrice');
+
+    addButton.addEventListener('click', function () {
+      const itemInput = document.getElementById('item');
+      const priceInput = document.getElementById('price');
+
+      const itemName = itemInput.value;
+      const itemPrice = parseFloat(priceInput.value);
+
+      if (itemName && !isNaN(itemPrice)) {
+        // Create a new row in the table
+        const newRow = document.createElement('tr');
+
+        const nameCell = document.createElement('td');
+        nameCell.textContent = itemName;
+
+        const priceCell = document.createElement('td');
+        priceCell.textContent = itemPrice.toFixed(2);
+
+        const actionsCell = document.createElement('td');
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.addEventListener('click', function () {
+          // Remove the row from the table
+          itemTableBody.removeChild(newRow);
+          // Update the total price
+          updateTotalPrice();
+        });
+
+        actionsCell.appendChild(deleteButton);
+
+        newRow.appendChild(nameCell);
+        newRow.appendChild(priceCell);
+        newRow.appendChild(actionsCell);
+
+        // Add click event listener to change background color
+        newRow.addEventListener('click', function () {
+          if (newRow.style.backgroundColor === 'red') {
+            newRow.style.backgroundColor = 'green';
+          } else {
+            newRow.style.backgroundColor = 'red';
+          }
+        });
+
+        itemTableBody.appendChild(newRow);
+
+        // Update the total price
+        updateTotalPrice();
+
+        // Clear input fields
+        itemInput.value = '';
+        priceInput.value = '';
+      }
+    });
+
+    function updateTotalPrice() {
+      const rows = itemTableBody.querySelectorAll('tr');
+      let totalPrice = 0;
+      rows.forEach(function (row) {
+        const priceCell = row.querySelector('td:nth-child(2)');
+        const price = parseFloat(priceCell.textContent);
+        totalPrice += price;
+      });
+      totalPriceElement.textContent = totalPrice.toFixed(2);
+    }
+  </script>
+</body>
+</html>
