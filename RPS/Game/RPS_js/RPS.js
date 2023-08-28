@@ -20,6 +20,7 @@ const objects = [
     image: `<img src="../Game/RPS_css/scissors.jpg" style = "height: 100%; width: 100%; border-radius: 0.5em;"/>`,
   },
 ];
+<<<<<<< HEAD
 
 let userPoint = 0;
 let CompPoint = 0;
@@ -47,6 +48,10 @@ async function countDown() {
 
 countDown();
 //why isn't working.
+=======
+//countDown function called gives a 3 second counter before game commences
+countDown(); 
+>>>>>>> e331b5155cd579b55becb3052da06e2c517adf43
 //we have event addEventListeners each containintwo functions which have been called and shall be expplained below
 //the rock.addEventListener uses the display to display the image of a rock from the array Objects and randomisation done for the computer to display its own image(random()) and comparison done to award a point(compare())
 rock.addEventListener("click", function () {

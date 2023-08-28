@@ -1,1 +1,0 @@
-`create a html box. when tapping box changes to red. box has any other color`
