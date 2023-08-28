@@ -1,0 +1,137 @@
+:root {
+  --primary-color: #2fb18f;
+}
+
+body {
+  margin: 0px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  place-content: space-between;
+  background-color: white;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 10em;
+  padding-right: 10em;
+  -webkit-box-shadow: 0px 0px 8px #e9e2e2;
+          box-shadow: 0px 0px 8px #e9e2e2;
+}
+
+.header .logo {
+  padding-top: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .logo p {
+  padding-left: 0.3em;
+  color: var(--primary-color);
+  font-family: PoetsenOne;
+}
+
+.header .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 2px;
+}
+
+.header .box button {
+  border: none;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 1em;
+  padding: 0.5em;
+  width: 5em;
+  font-family: PoetsenOne;
+  height: 2.2em;
+  margin-top: 2.3em;
+  cursor: pointer;
+}
+
+.header .box img {
+  margin-left: 0.7em;
+}
+
+.main1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+  margin-top: 2em;
+  margin-left: 10em;
+  margin-right: 10em;
+}
+
+.main1 .info {
+  margin-top: 6.5em;
+  font-family: PoetsenOne;
+}
+
+.main1 .info h1 {
+  font-weight: bolder;
+  font-size: 5em;
+  line-height: 1em;
+}
+
+.main1 .info p {
+  color: grey;
+  line-height: 10px;
+}
+
+.main1 .info a {
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border: none;
+  margin-top: 13px;
+  border-radius: 1.2em;
+  display: inline-block;
+  padding: 0.8em 2em;
+  width: unset;
+  cursor: pointer;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer h1 {
+  font-family: PoetsenOne;
+  margin-right: 300px;
+  padding-top: 80px;
+  margin-left: 50px;
+}
+
+.footer p {
+  font-family: PoetsenOne;
+  color: Grey;
+  margin-left: 50px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  font-family: PoetsenOne;
+  background-color: var(--primary-color);
+  text-decoration: none;
+  border: none;
+  margin-top: 13px;
+  border-radius: 1.2em;
+  display: inline-block;
+  padding: 0.8em 2em;
+  width: unset;
+  cursor: pointer;
+  margin-left: 50px;
+}
+/*# sourceMappingURL=index.css.map */
