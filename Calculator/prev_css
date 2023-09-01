@@ -1,0 +1,40 @@
+body {
+  background-color: aliceblue;
+}
+.wrap {
+  background-color: white;
+  width: max-content;
+  //   justify-content: center;
+  //   align-content: center;
+  text-align: center;
+  margin: 0px auto 0px auto;
+  border-radius: 1em;
+  border: 7px blue;
+  form {
+    padding: 0em 0em 2em 0em;
+  }
+}
+.display {
+  height: 4em;
+  padding: 0em 0em 0em 0em;
+  border-radius: 1em 1em 0em 0em;
+  background-color: lightblue;
+  text-align: right;
+  font-size: 3em;
+}
+.btn {
+  border: none;
+  background-color: red;
+  font-size: 1.3em;
+  padding: 0px 2em;
+  margin-left: 25px;
+  border-radius: 200%;
+  height: 4em;
+  color: white;
+}
+.symbol {
+  background-color: rgb(19, 19, 88);
+}
+.equate {
+  background-color: orange;
+}

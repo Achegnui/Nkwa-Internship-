@@ -1,0 +1,43 @@
+.wrap {
+  border: 1.6px solid lightgrey;
+  border-radius: 0.4em;
+  margin: 3em auto;
+  max-width: 35em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.display {
+  border: 1.6px solid lightgrey;
+  border-radius: 0.2em;
+  height: 68px;
+  padding-right: 6px;
+  width: 14.3em;
+  margin-top: 1em;
+  margin-bottom: 15px;
+  font-size: 2em;
+  
+}
+.btn {
+  background-color: transparent;
+  border: 1.6px solid lightgrey;
+  border-radius: 0.2em;
+  text-align: left;
+  width: 2.5em;
+  height: 2em;
+  font-size: 35px;
+  margin-right: 7px;
+  margin-left: 1px;
+  cursor: pointer;
+  padding-right: 2.4em;
+  padding-left: 20px;
+}
+hr {
+  border: 2px solid lightgray;
+  margin-top: 50px;
+  margin-bottom: 3em;
+  border-radius: 2em;
+}

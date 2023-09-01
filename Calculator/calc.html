@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <form name="cal">
+        <input type="text" name="display" class="display" id="display" />
+        <br /><br />
+        <input
+          type="button"
+          value="1"
+          onclick="cal.display.value += '1'"
+          class="btn"
+        />
+        <input
+          type="button"
+          value="2"
+          onclick="cal.display.value += '2'"
+          class="btn"
+        />
+        <input
+          type="button"
+          value="3"
+          onclick="cal.display.value += '3'"
+          class="btn"
+        />
+        <input
+          type="button"
+          value="4"
+          onclick="cal.display.value += '4'"
+          class="btn"
+        />
+
+        <br /><br />
+        <input
+          type="button"
+          value="5"
+          onclick="cal.display.value += '5'"
+          class="btn"
+        />
+        <input
+          type="button"
+          value="6"
+          onclick="cal.display.value += '6'"
+          class="btn"
+        />
+        <input
+          type="button"
+          value="7"
+          onclick="cal.display.value += '7'"
+          class="btn"
+        />
+        <input
+          type="button"
+          value="8"
+          onclick="cal.display.value += '8'"
+          class="btn"
+        />
+
+        <br /><br />
+        <input
+          type="button"
+          value="9"
+          onclick="cal.display.value += '9'"
+          class="btn"
+        />
+        <input
+          type="button"
+          value="0"
+          onclick="cal.display.value += '0'"
+          class="btn"
+        />
+        <input
+          type="button"
+          value="-"
+          onclick="cal.display.value += '-'"
+          class="btn"
+        />
+        <input
+          type="button"
+          value="+"
+          onclick="cal.display.value += '+'"
+          class="btn"
+        />
+
+        <br /><br />
+        <input type="button" value="C" class="btn" id="clear" />
+        <input
+          type="button"
+          value="%"
+          onclick="cal.display.value += '0'"
+          class="btn"
+        />
+        <input
+          type="button"
+          value="x"
+          onclick="cal.display.value += '*'"
+          class="btn"
+        />
+        <input type="button" value="=" class="btn" id="equate" />
+        <hr class="line" />
+      </form>
+    </div>
+    <script>
+      let display = document.getElementById("display");
+      let clear = document.getElementById("clear");
+      let equate = document.getElementById("equate");
+
+      equate.addEventListener("click", function () {
+        let error = 0;
+        const equation = display.value;
+        let clean = Array.from(equation);
+        for (let i = 0; i < clean.length; i++) {
+          console.log(Number(clean[i]));
+          if (
+            Number(clean[i]) ||
+            clean[i] == "+" ||
+            clean[i] == "/" ||
+            clean[i] == "*" ||
+            clean[i] == "-" ||
+            clean[i] == "%"
+          ) {
+            continue;
+          } else {
+            error = 1;
+            break;
+          }
+        }
+        if (error == 0) {
+          display.style.borderColor = "green";
+          display.value = eval(equation);
+        } else {
+          display.style.borderColor = "red";
+        }
+      });
+      clear.addEventListener("click", function () {
+        clearOff();
+      });
+      function clearOff() {
+        display.value = "";
+      }
+    </script>
+  </body>
+</html>
