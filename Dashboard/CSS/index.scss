@@ -1,6 +1,7 @@
 :root {
   --primary-color: #2fb18f;
 }
+
 body {
   margin: 0px;
 }
@@ -11,43 +12,42 @@ body {
   place-content: space-between;
   background-color: white;
   flex-wrap: wrap;
-  //   padding: 1em;
   padding-left: 10em;
   padding-right: 10em;
   box-shadow: 0px 0px 8px rgb(233, 226, 226);
+}
 
-  .logo {
-    padding-top: 0.5em;
-    // background-color: red;
-    display: flex;
-    p {
-      padding-left: 0.3em;
-      color: var(--primary-color);
-      font-family: PoetsenOne;
-    }
-  }
-  .box {
-    // background-color: yellow;
-    display: flex;
-    padding-bottom: 2px;
+.logo {
+  padding-top: 0.5em;
+  display: flex;
+}
 
-    button {
-      border: none;
-      color: white;
-      background-color: var(--primary-color);
-      border-radius: 1em;
-      padding: 0.5em;
-      width: 5em;
-    //   font-weight: bolder;
-      font-family: PoetsenOne;
-      height: 2.2em;
-      margin-top: 2.3em;
-      cursor: pointer;
-    }
-    img {
-      margin-left: 0.7em;
-    }
-  }
+.logo p {
+  padding-left: 0.3em;
+  color: var(--primary-color);
+  font-family: PoetsenOne;
+}
+
+.box {
+  display: flex;
+  padding-bottom: 2px;
+}
+
+.button {
+  border: none;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 1em;
+  padding: 0.5em;
+  width: 5em;
+  font-family: PoetsenOne;
+  height: 2.2em;
+  margin-top: 2.3em;
+  cursor: pointer;
+}
+
+.button img {
+  margin-left: 0.7em;
 }
 
 .main1 {
@@ -56,65 +56,92 @@ body {
   margin-top: 2em;
   margin-left: 10em;
   margin-right: 10em;
+}
 
-  .info {
-    margin-top: 6.5em;
-    font-family: PoetsenOne;
-    h1 {
-      font-weight: bolder;
-      font-size: 5em;
-      line-height: 1em;
-    }
-    p {
-      color: grey;
-      line-height: 10px;
-    }
-    a {
-      background-color: var(--primary-color);
-      color: white;
-    //   font-weight: bold;
-      text-decoration: none;
-      border: none;
-      margin-top: 13px;
-      border-radius: 1.2em;
-      display: inline-block;
-      padding: 0.8em 2em;
-      width: unset;
-      cursor: pointer;
-    }
-  }
+.info {
+  margin-top: 6.5em;
+  font-family: PoetsenOne;
+}
+
+.info h1 {
+  font-weight: bolder;
+  font-size: 5em;
+  line-height: 1em;
+}
+
+.info p {
+  color: grey;
+  line-height: 10px;
+}
+
+.info a {
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border: none;
+  margin-top: 13px;
+  border-radius: 1.2em;
+  display: inline-block;
+  padding: 0.8em 2em;
+  width: unset;
+  cursor: pointer;
 }
 
 .footer {
   display: flex;
-  
+}
 
-  h1{
-    font-family: PoetsenOne;
-    margin-right: 300px;
-    padding-top: 80px;
-    margin-left: 50px;
-  }
-  p{
-    font-family: PoetsenOne;
-    color: Grey;
-    margin-left: 50px;
-  }
-  a{
-    text-decoration: none;
-    color: white;
-    font-family: PoetsenOne;
-    background-color: var(--primary-color);
-    // font-weight: bold;
-    text-decoration: none;
-    border: none;
-    margin-top: 13px;
-    border-radius: 1.2em;
-    display: inline-block;
-    padding: 0.8em 2em;
-    width: unset;
-    cursor: pointer;
-    margin-left: 50px;
+.footer h1 {
+  font-family: PoetsenOne;
+  margin-right: 300px;
+  padding-top: 80px;
+  margin-left: 50px;
+}
+
+.footer p {
+  font-family: PoetsenOne;
+  color: Grey;
+  margin-left: 50px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  font-family: PoetsenOne;
+  background-color: var(--primary-color);
+  text-decoration: none;
+  border: none;
+  margin-top: 13px;
+  border-radius: 1.2em;
+  display: inline-block;
+  padding: 0.8em 2em;
+  width: unset;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+/* Responsive Styles */
+
+@media only screen and (max-width: 768px) {
+  .header {
+    padding-left: 1em;
+    padding-right: 1em;
   }
 
+  .main1 {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .main1 {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
 }

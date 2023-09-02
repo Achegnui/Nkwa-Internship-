@@ -93,7 +93,7 @@
         <input
           type="button"
           value="%"
-          onclick="cal.display.value += '0'"
+          onclick="cal.display.value += '%'"
           class="btn"
         />
         <input
@@ -116,9 +116,9 @@
         const equation = display.value;
         let clean = Array.from(equation);
         for (let i = 0; i < clean.length; i++) {
-          console.log(Number(clean[i]));
           if (
-            Number(clean[i]) ||
+            parseInt(clean[i]) ||
+            parseInt(clean[i]) == 0 ||
             clean[i] == "+" ||
             clean[i] == "/" ||
             clean[i] == "*" ||
@@ -127,6 +127,7 @@
           ) {
             continue;
           } else {
+            console.log("bad character", clean[i]);
             error = 1;
             break;
           }
